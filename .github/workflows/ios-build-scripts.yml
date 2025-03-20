@@ -43,7 +43,7 @@ jobs:
       - name: set up xcode
         run: echo "export DEVELOPER_DIR=/Applications/Xcode_${{ matrix.xcode }}.app/Contents/Developer" > ~/.xcode.for.ffmpeg.kit.sh
       - name: run the build script
-        run: ./ios.sh --enable-ios-audiotoolbox --enable-ios-avfoundation --enable-ios-bzip2 --enable-ios-libiconv --enable-ios-videotoolbox --enable-ios-zlib --enable-gpl --disable-armv7 --disable-armv7s --disable-arm64-mac-catalyst --disable-arm64-simulator --disable-i386 --disable-x86-64-mac-catalyst --full --enable-x264 --enable-x265
+        run: ./ios.sh --enable-ios-audiotoolbox --enable-ios-avfoundation --enable-ios-bzip2 --enable-ios-libiconv --enable-ios-videotoolbox --enable-ios-zlib --enable-gpl --disable-armv7 --disable-armv7s --disable-arm64-mac-catalyst --disable-arm64-simulator --disable-i386 --disable-x86-64 --disable-x86-64-mac-catalyst --enable-xvidcore --full --enable-x264 --enable-x265
 #--xcframework --enable-ios-audiotoolbox --enable-ios-avfoundation --enable-ios-bzip2 --enable-ios-libiconv --enable-ios-videotoolbox --enable-ios-zlib
       - name: print build logs
         if: ${{ always() }}
